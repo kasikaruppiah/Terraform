@@ -16,7 +16,7 @@ provider "aws" {
 #   NAME        : identifier to use in the Terraform Code
 #   CONFIG      : one or more configuration parameters, specific to the resource
 # 
-# Deploy a single server, EC2 Instance in AWS
+# Deploy a single web server, EC2 Instance in AWS
 resource "aws_instance" "singlewebserver" {
     # ami                       : Amazon Machine Image to run on the EC2 Instance
     # instance_type             : type of EC2 Instance to run
