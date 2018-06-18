@@ -1,7 +1,7 @@
 # Configure provider
 # Deploy infrastructure on AWS in us-east-1 region
 provider "aws" {
-    region = "us-east-1"
+  region = "us-east-1"
 }
 
 # Create resources for the provider
@@ -18,14 +18,15 @@ provider "aws" {
 # 
 # Deploy a single server, EC2 Instance in AWS
 resource "aws_instance" "singleserver" {
-    # ami           : Amazon Machine Image to run on the EC2 Instance
-    # instance_type : type of EC2 Instance to run
-    ami             = "ami-a4dc46db"
-    instance_type   = "t2.micro"
+  # ami           : Amazon Machine Image to run on the EC2 Instance
+  # instance_type : type of EC2 Instance to run
+  ami = "ami-a4dc46db"
 
-    # Add tags to EC2 Instance
-    tags {
-        Name = "terraform-single-server"
-        User = "kasi"
-    }
+  instance_type = "t2.micro"
+
+  # Add tags to EC2 Instance
+  tags {
+    Name = "terraform-single-server"
+    User = "kasi"
+  }
 }
